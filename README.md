@@ -1,3 +1,3 @@
 # tshimada291.github.io
 
-This is my page.
+<https://tshimada291.github.io/>
