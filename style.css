@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+*{margin: 0; padding:0}
+body{
+	font-family: 'Lucida Grande', 'Hiragino Kaku Gothic Pro', Meiryo, sans-serif;
+	background: #eee;
+	
+}
+.header{
+	padding: 10px 30px;
+	//background: #316745;
+}
+/*.header h1, .header p{
+	color: #fff;
+}*/
+.content{
+	padding: 20px 30px;
+	background: #fff;
+}
+.section{
+	margin-bottom: 30px
+}
+.topic{
+	margin-bottom: 20px
+}
+.section h2{
+	padding: 5px 15px;
+	margin-bottom: 10px;
+	border-left: solid 10px #316745;
+	background: #fafafa;
+}
+.section h3{
+	padding: 5px 15px;
+	margin-bottom: 10px;
+	border-left: solid 10px #38b48b;
+}
+.section ul{margin: 10px 15px}
+.section li{margin-bottom: 5px}
+.footer{
+	padding: 10px 30px;
+	background: #eee;
+}
