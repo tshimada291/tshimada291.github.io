@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>GTFS・オープンデータ公開サイト</title>
+<link.css
+</head>
+<style>
+body{
+    font-family: "Segoe UI", sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.7;
+    color: #333;
+    background: #fff;
+}
+
+.hdr{
+    background:#f5faf5;
+    border-radius:12px;
+    padding:40px;
+    margin-bottom:40px;
+}
+
+h1{
+    color:#2e7d32;
+    margin-top:0;
+}
+
+h2{
+    color:#2e7d32;
+    border-bottom:2px solid #2e7d32;
+    padding-bottom:8px;
+}
+
+nav{
+    margin-top:20px;
+}
+
+nav a{
+    margin-right:16px;
+    color:#2e7d32;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:
+      repeat(auto-fit,minmax(280px,1fr));
+    gap:16px;
+}
+
+.card{
+    border:1px solid #dfe7df;
+    border-radius:10px;
+    padding:20px;
+    background:#fff;
+    box-shadow:
+      0 1px 3px rgba(0,0,0,.08);
+}
+
+.button{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 16px;
+    border-radius:6px;
+    background:#2e7d32;
+    color:white;
+    text-decoration:none;
+}
+
+footer{
+    margin-top:60px;
+    padding-top:20px;
+    border-top:1px solid #ccc;
+    text-align:center;
+    color:#666;
+}
+
+</style>
+<body>
+
+<header class="hdr">
+  <h1>GTFS・オープンデータ公開サイト (tshimada.github.io)</h1>
+
+  <p>公共交通オープンデータ、GTFS、Linked Open Dataに関するデータセットおよびWebアプリケーションを公開しています。</p>
+</header>
+
+<main>
+
+<section id="tools">
+  <h2>ツール</h2>
+
+  <div class="card">
+    <h3>GTFS更新監視ダッシュボード</h3>
+    <p>「標準的なバス情報フォーマット」データ更新状況チェック</p>
+    <a href="https://tshimada291.github.io/gtfs-jp-list-datecheck/dashboard.html">GTFS更新監視ダッシュボード（gtfs-jp-list-datecheck）<a>
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>Linked-GTFS Viewer</h3>
+    <p>リンクデータ版GTFSデータビューア</p>
+    <a href="https://tshimada291.github.io/lod-gtfs-viewer/">Linked-GTFS Viewer</a>
+    </a>
+  </div>
+</section>
+
+<section id="gtfs">
+  <h2>GTFSデータ</h2>
+
+  <div class="grid">
+    <article class="card">
+      <h3>函館市電</h3>
+      <p>北海道函館市</p>
+      <a href="https://github.com/tshimada291/hakodateshiden">函館市電</a>
+    </article>
+
+    <article class="card">
+      <h3>つつじバス</h3>
+      <p>福井県鯖江市</p>
+      <a href="https://github.com/tshimada291/tsutsujibusGTFS">つつじバス</a>
+    </article>
+
+    <article class="card">
+      <h3>なかま号</h3>
+      <p>福井県池田町</p>
+      <a href="https://github.com/tshimada291/fukui_ikedaGTFS">なかま号</a>
+    </article>
+
+    <article class="card">
+      <h3>金沢ふらっとバス</h3>
+      <p>石川県金沢市</p>
+      <a href="https://github.com/tshimada291/kanazawa_flatbus_GTFS">金沢ふらっとバス</a>
+    </article>
+
+    <article class="card">
+      <h3>珠洲市営バス</h3>
+      <p>石川県珠洲市</p>
+      <a href="https://github.com/tshimada291/suzucity_GTFS">珠洲市営バス</a>
+    </article>
+  </div>
+</section>
+
+<section id="links">
+  <h2>関連サイト</h2>
+  <ul>
+    <li><a href="https://developers.google.com/transit/gtfs/?hl=ja" target="_blank">静的な GTFS の概要</a>（Google）</li>
+    <li><a href="http://www.mlit.go.jp/sogoseisaku/transport/sosei_transport_tk_000067.html" target="_blank">経路検索の充実とバスロケデータの利活用　～標準的なバス情報フォーマットの拡充～</a>（国土交通省）</li>
+    <li><a href="https://www.busdata.or.jp/" target="_blank">一般社団法人日本バス情報協会</a></li>
+    <li><a href="http://www.rosenzu.com/net/mieru/index.html" target="_blank">地域公共交通ネットワークの「見える化」の取り組み</a>（公共交通利用促進ネットワーク）</li>
+    <li><a href="https://gtfs-gis.jp/gtfs/" target="_blank">標準的なバス情報フォーマット出力ツール提供ページ</a>（地域・交通データ研究所）</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+&copy; 2018-2026 T.Shimada
+</footer>
+
+</body>
+</html>
