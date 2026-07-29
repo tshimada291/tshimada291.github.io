@@ -2,9 +2,9 @@
 
 *{margin: 0; padding:0}
 body{
-	font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Arial", "Yu Gothic", "Meiryo", sans-serif;
-	background: #eee;
-	
+    font-family:"Yu Gothic","Meiryo",sans-serif;
+    margin:20px;
+    background:#fafafa;
 }
 .header{
 	padding: 10px 30px;
