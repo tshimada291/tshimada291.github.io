@@ -17,21 +17,27 @@ body{
 }
 
 .hdr{
-    background:#f5faf5;
-    border-radius:12px;
-    padding:40px;
-    margin-bottom:40px;
+    background: #2e7d32;
+    //background: #f5faf5;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 40px;
 }
 
 h1{
-    color:#2e7d32;
-    margin-top:0;
+    color: #ffffff;
+    //color: #2e7d32;
+    margin-top: 0;
+}
+
+.hdr p{
+    color: #ffffff;
 }
 
 h2{
     color:#2e7d32;
-    border-bottom:2px solid #2e7d32;
-    padding-bottom:8px;
+    border-bottom: 2px solid #2e7d32;
+    padding-bottom: 8px;
 }
 
 nav{
@@ -40,43 +46,121 @@ nav{
 
 nav a{
     margin-right:16px;
-    color:#2e7d32;
+    color:#ffffff;
     text-decoration:none;
     font-weight:bold;
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:
-      repeat(auto-fit,minmax(280px,1fr));
-    gap:16px;
+.summary{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    gap: 16px;
+    margin: 32px 0;
+}
+
+.summary-card{
+    text-decoration: none;
+    color: #333;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #d0d7de;
+    background: #fff;
+    text-align: center;
+}
+
+.summary-card:hover{
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.count{
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.label{
+    display: block;
+    margin-top: 8px;
+}
+
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
 .card{
-    border:1px solid #dfe7df;
-    border-radius:10px;
-    padding:20px;
-    background:#fff;
-    box-shadow:
-      0 1px 3px rgba(0,0,0,.08);
+    background: #fff;
+    border: 1px solid #d0d7de;
+    border-radius: 12px;
+    padding: 20px;
+    transition: 0.2s;
 }
 
-.button{
+.card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card-action{
     display:inline-block;
-    margin-top:10px;
-    padding:8px 16px;
-    border-radius:6px;
-    background:#2e7d32;
-    color:white;
-    text-decoration:none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: #2e7d32;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.card-action:hover{
+    background: #1f5f24;
+}
+
+.card-subaction{
+    display: block;
+    margin-top: 12px;
+    color: #666;
+    text-decoration: none;
+}
+
+.card-subaction:hover{
+    color: #2e7d32;
+    text-decoration: underline;
+}
+
+.card h3{
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #2e7d32;
+}
+
+.tag{
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.location{
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.description{
+    min-height:48px;
 }
 
 footer{
-    margin-top:60px;
-    padding-top:20px;
-    border-top:1px solid #ccc;
-    text-align:center;
-    color:#666;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    color: #666;
 }
 
 </style>
@@ -84,62 +168,81 @@ footer{
 
 <header class="hdr">
   <h1>GTFS・オープンデータ公開サイト (tshimada.github.io)</h1>
-
   <p>公共交通オープンデータ、GTFS、Linked Open Dataに関するデータセットおよびWebアプリケーションを公開しています。</p>
 </header>
 
 <main>
 
+<section class="summary">
+  <a href="#tools" class="summary-card">
+    <span class="count">2</span>
+    <span class="label">Webアプリ</span>
+  </a>
+  <a href="#gtfs" class="summary-card">
+    <span class="count">5</span>
+    <span class="label">GTFSデータ</span>
+  </a>
+</section>
+
 <section id="tools">
-  <h2>ツール</h2>
+  <h2>Webアプリ</h2>
 
-  <div class="card">
-    <h3>GTFS更新監視ダッシュボード</h3>
-    <p>「標準的なバス情報フォーマット」データ更新状況チェック</p>
-    <a href="https://tshimada291.github.io/gtfs-jp-list-datecheck/dashboard.html">GTFS更新監視ダッシュボード（gtfs-jp-list-datecheck）<a>
-    </a>
-  </div>
+  <div class="card-grid">
+    <article class="card">
+      <span class="tag">GTFS</span>
+      <h3>GTFS更新監視ダッシュボード</h3>
+      <p>「標準的なバス情報フォーマット」データ更新状況チェック</p>
+      <a href="https://tshimada291.github.io/gtfs-jp-list-datecheck/dashboard.html" class="card-action" target="_blank" rel="noopener noreferrer">GTFS更新監視ダッシュボード</a><br>
+      <a href="https://github.com/tshimada291/gtfs-jp-list-datecheck" class="card-subaction" target="_blank" rel="noopener noreferrer">🔗リポジトリ（gtfs-jp-list-datecheck）</a>
+    </article>
 
-  <div class="card">
-    <h3>Linked-GTFS Viewer</h3>
-    <p>リンクデータ版GTFSデータビューア</p>
-    <a href="https://tshimada291.github.io/lod-gtfs-viewer/">Linked-GTFS Viewer</a>
-    </a>
+    <article class="card">
+      <span class="tag">LOD</span>
+      <h3>Linked-GTFS Viewer</h3>
+      <p>リンクデータ版GTFSデータビューア</p>
+      <a href="https://tshimada291.github.io/lod-gtfs-viewer/" class="card-action" target="_blank" rel="noopener noreferrer">Linked-GTFS Viewer</a>
+      <a href="https://github.com/tshimada291/lod-gtfs-viewer/" class="card-subaction" target="_blank" rel="noopener noreferrer">🔗リポジトリ（lod-gtfs-viewer）</a>
+    </article>
   </div>
 </section>
 
 <section id="gtfs">
   <h2>GTFSデータ</h2>
-
-  <div class="grid">
+  <p>※ アーカイブとして公開しています。更新は行っていません。</p>
+  <div class="card-grid">
     <article class="card">
+      <span class="tag">北海道</span>
       <h3>函館市電</h3>
       <p>北海道函館市</p>
-      <a href="https://github.com/tshimada291/hakodateshiden">函館市電</a>
+      <a href="https://github.com/tshimada291/hakodateshiden" class="card-action" target="_blank" rel="noopener noreferrer">hakodateshiden</a>
     </article>
 
     <article class="card">
-      <h3>つつじバス</h3>
-      <p>福井県鯖江市</p>
-      <a href="https://github.com/tshimada291/tsutsujibusGTFS">つつじバス</a>
-    </article>
-
-    <article class="card">
-      <h3>なかま号</h3>
-      <p>福井県池田町</p>
-      <a href="https://github.com/tshimada291/fukui_ikedaGTFS">なかま号</a>
-    </article>
-
-    <article class="card">
+      <span class="tag">石川県</span>
       <h3>金沢ふらっとバス</h3>
       <p>石川県金沢市</p>
-      <a href="https://github.com/tshimada291/kanazawa_flatbus_GTFS">金沢ふらっとバス</a>
+      <a href="https://github.com/tshimada291/kanazawa_flatbus_GTFS" class="card-action" target="_blank" rel="noopener noreferrer">kanazawa_flatbus_GTFS</a>
     </article>
 
     <article class="card">
+      <span class="tag">石川県</span>
       <h3>珠洲市営バス</h3>
       <p>石川県珠洲市</p>
-      <a href="https://github.com/tshimada291/suzucity_GTFS">珠洲市営バス</a>
+      <a href="https://github.com/tshimada291/suzucity_GTFS" class="card-action" target="_blank" rel="noopener noreferrer">suzucity_GTFS</a>
+    </article>
+
+    <article class="card">
+      <span class="tag">福井県</span>
+      <h3>つつじバス</h3>
+      <p>福井県鯖江市</p>
+      <a href="https://github.com/tshimada291/tsutsujibusGTFS"  class="card-action" target="_blank" rel="noopener noreferrer">tsutsujibusGTFS</a>
+    </article>
+
+    <article class="card">
+      <span class="tag">福井県</span>
+      <h3>なかま号</h3>
+      <p>福井県池田町</p>
+      <a href="https://github.com/tshimada291/fukui_ikedaGTFS"  class="card-action" target="_blank" rel="noopener noreferrer">fukui_ikedaGTFS</a>
     </article>
   </div>
 </section>
@@ -147,11 +250,10 @@ footer{
 <section id="links">
   <h2>関連サイト</h2>
   <ul>
-    <li><a href="https://developers.google.com/transit/gtfs/?hl=ja" target="_blank">静的な GTFS の概要</a>（Google）</li>
-    <li><a href="http://www.mlit.go.jp/sogoseisaku/transport/sosei_transport_tk_000067.html" target="_blank">経路検索の充実とバスロケデータの利活用　～標準的なバス情報フォーマットの拡充～</a>（国土交通省）</li>
-    <li><a href="https://www.busdata.or.jp/" target="_blank">一般社団法人日本バス情報協会</a></li>
-    <li><a href="http://www.rosenzu.com/net/mieru/index.html" target="_blank">地域公共交通ネットワークの「見える化」の取り組み</a>（公共交通利用促進ネットワーク）</li>
-    <li><a href="https://gtfs-gis.jp/gtfs/" target="_blank">標準的なバス情報フォーマット出力ツール提供ページ</a>（地域・交通データ研究所）</li>
+    <li><a href="https://developers.google.com/transit/gtfs/?hl=ja" target="_blank" rel="noopener noreferrer">GTFS 静的フィード</a>（Google）</li>
+    <li><a href="http://www.mlit.go.jp/sogoseisaku/transport/sosei_transport_tk_000067.html" target="_blank" rel="noopener noreferrer">公共交通運行情報標準データ（GTFS-JP）に関する資料・検討会</a>（国土交通省）</li>
+    <li><a href="http://www.rosenzu.com/net/mieru/index.html" target="_blank" rel="noopener noreferrer">地域公共交通ネットワークの「見える化」の取り組み</a>（公共交通利用促進ネットワーク）</li>
+    <li><a href="https://gtfs-gis.jp/gtfs/" target="_blank" rel="noopener noreferrer">GTFS-JP作成ツール（西沢ツール）提供ページ</a>（地域・交通データ研究所）</li>
   </ul>
 </section>
 
